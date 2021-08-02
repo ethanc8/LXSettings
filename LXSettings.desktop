@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=LXSettings
+Terminal=false
+Name=Settings
+Exec=python3 /home/pi/Projects/LXSettings/main.py
+Type=Application
+Icon=preferences-desktop
+Categories=Settings;DesktopSettings;GTK;X-LXDE-Settings;
