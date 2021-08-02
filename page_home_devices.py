@@ -19,13 +19,18 @@ class __page_home_devices(LXSettings.DirectoryPage):
             ), LXSettings.DirectoryButton(
                 icon_name = "computer",
                 label_str = "Monitors",
-                description_str = "Change monitor resolution, display rate, and layout",
+                description_str = "Change monitor resolution, display rate, and layout.",
                 onclick_command = ["arandr"],
             ), LXSettings.DirectoryButton(
                 icon_name = "preferences-system-bluetooth",
                 label_str = "Bluetooth",
-                description_str = "Connect and disconnect from Bluetooth devices",
+                description_str = "Connect and disconnect from Bluetooth devices.",
                 onclick_command = ["blueman-manager"],
+            ), LXSettings.DirectoryButton(
+                icon_name = "preferences-system-bluetooth",
+                label_str = "Bluetooth Adapters",
+                description_str = "Configure Bluetooth adapters and their visibility.",
+                onclick_command = ["blueman-adapters"],
             ), LXSettings.DirectoryButton(
                 icon_name = "printer",
                 label_str = "Printers",
