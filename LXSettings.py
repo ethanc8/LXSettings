@@ -86,6 +86,7 @@ class DirectoryPage(Page):
     def __init__(self):
         self.init_begin()
         self.init_end()
+
     def init_begin(self):
         super().init_begin()
         
@@ -119,8 +120,18 @@ class DirectoryPage(Page):
             # ))
             self.flowbox.add(item)
 
+class XEmbedPage(Page):
+    def __init__(self):
+        self.init_begin()
+        self.init_end()
 
-
+    def init_begin(self):
+        super().init_begin()
+        self.top_widget = Gtk.Socket()
+        self.window_id = self.top_widget.get_id()
+    
+    def init_end(self):
+        super().init_end()
 
 
 
