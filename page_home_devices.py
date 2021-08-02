@@ -38,8 +38,8 @@ class __page_home_devices(LXSettings.DirectoryPage):
                 onclick_command = ["chromium-browser", "--app=https://localhost:631", "--allow-insecure-localhost"],
             ), LXSettings.DirectoryButton(
                 icon_name = "multimedia-volume-control",
-                label_str = "Audio Devices",
-                description_str = "Manage the printing system via the CUPS web interface.",
+                label_str = "Speaker and Microphone",
+                description_str = "Change the preferred audio devices and their volumes.",
                 onclick_command = ["pavucontrol"],
             ), 
             # ["preferences-desktop-peripherals", "Keyboard and Mouse", "Change mouse speed and keyboard layout.", lambda _: [
