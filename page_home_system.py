@@ -30,7 +30,7 @@ class __page_home_system(LXSettings.DirectoryPage):
                 label_str = "Backup and Restore",
                 description_str = "Back up and restore backups of the operating system.",
                 onclick = lambda _: [
-                    LXSettings.open_process(["sudo", "-A", "timeshift"], {
+                    LXSettings.open_process(["sudo", "-A", "timeshift-launcher"], {
                         "SUDO_ASKPASS" : "/usr/lib/rc-gui/pwdrcg.sh"
                     })
                 ]
