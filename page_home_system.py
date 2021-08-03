@@ -24,7 +24,7 @@ class __page_home_system(LXSettings.DirectoryPage):
                 icon_name = "xfce4-notifyd",
                 label_str = "Notifications",
                 description_str = "Configure how notifications work and see past notifications.",
-                onclick_command = ["xfce4-notifyd-config"],
+                onclick_page_str = "Home -> System -> Notifications",
             ), LXSettings.DirectoryButton(
                 icon_name = "timeshift",
                 label_str = "Backup and Restore",

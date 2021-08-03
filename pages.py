@@ -5,6 +5,8 @@ import page_home_devices
 import page_home_devices_printers
 
 import page_home_system
+import page_home_system_notifications
+
 import page_home_network
 import page_home_software
 
