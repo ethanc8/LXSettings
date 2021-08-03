@@ -38,7 +38,8 @@ class MainStack(Gtk.Stack):
 #         self.navigateToPage("Home -> Appearance")
 #         self.navigateToPage("Home")
         # self.pages = self.pages.copy()
-    
+        self.current_page = None
+
     def addPage(self, page):
         # print("addPageToMainStack(" + str(self) + ", " + str(page) + ", \"" + str(pageName) + "\"")
         pageName = page.page_path_str
@@ -49,8 +50,13 @@ class MainStack(Gtk.Stack):
 
     def navigateToPage(self, pageName: str):
         page = self.pageForPageName(pageName)
-#         self.addPageToMainStack(page, pageName)
-        self.set_visible_child(page.top_widget)
+        page.on_enter()
+        
+        if self.current_page != None:
+            self.current_page.on_exit()
+
+        self.props.visible_child = page.top_widget
+
         self.current_page = page
         main_breadcrumb.update()
 
@@ -77,10 +83,32 @@ class Page:
     def init_end(self):
         main_stack.addPage(self)
 
+
     @property
     def icon_widget(self, icon_size: Gtk.IconSize):
         return Gtk.Image.new_from_icon_name(self.icon_name, icon_size) 
 
+
+    def on_enter(self):
+        self.on_enter_begin()
+        self.on_enter_end()
+    
+    def on_enter_begin(self):
+        pass
+
+    def on_enter_end(self):
+        pass
+
+
+    def on_exit(self):
+        self.on_exit_begin()
+        self.on_exit_end()
+    
+    def on_exit_begin(self):
+        pass
+
+    def on_exit_end(self):
+        pass
 
 class DirectoryPage(Page):
     def __init__(self):
@@ -127,13 +155,43 @@ class XEmbedPage(Page):
 
     def init_begin(self):
         super().init_begin()
-        self.top_widget = Gtk.Socket()
-        self.window_id = self.top_widget.get_id()
+        self.top_widget = Gtk.Box()
     
     def init_end(self):
         super().init_end()
 
 
+    def on_enter(self):
+        self.on_enter_begin()
+        self.on_enter_end()
+
+    def on_enter_begin(self):
+        super().on_enter_begin()
+
+        self.socket = Gtk.Socket()
+
+        self.socket.props.hexpand = True
+        self.socket.props.vexpand = True
+
+        self.socket.show()
+        self.top_widget.add(self.socket)
+        self.top_widget.show()
+
+        self.window_id = self.socket.get_id() 
+        
+    def on_enter_end(self):
+        super().on_enter_end()
+
+    def on_exit(self):
+        self.on_exit_begin()
+        self.on_exit_end()
+    
+    def on_exit_begin(self):
+        pass
+
+    def on_exit_end(self):
+        self.socket.get_plug_window().destroy()
+    
 
 
 

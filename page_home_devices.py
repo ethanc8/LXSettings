@@ -35,7 +35,7 @@ class __page_home_devices(LXSettings.DirectoryPage):
                 icon_name = "printer",
                 label_str = "Printers",
                 description_str = "Connect to printers and view print jobs.",
-                onclick_command = ["system-config-printer"],
+                onclick_page_str = "Home -> Devices -> Printers",
             ), LXSettings.DirectoryButton(
                 icon_name = "printer",
                 label_str = "Printers (advanced)",
