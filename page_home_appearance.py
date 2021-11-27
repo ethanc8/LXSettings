@@ -30,27 +30,12 @@ to change your desktop's look and feel.""",
 - window borders
 - icons
 - fonts""", 
-                onclick_command = ["lxappearance"]
-            ), LXSettings.DirectoryButton(
-                icon_name = "system-file-manager",
-                label_str = "Gtk File Chooser",
-                description_str = "Change the look and feel of the Gtk file chooser",
-                onclick_command = [
-                    # "gtk3-nocsd",
-                    "dconf-editor",
-                    "/org/gtk/settings/file-chooser/",
-                    "--I-understand-that-changing-options-can-break-applications"
-                ],
+                onclick_command = ["lxappearance"],
             ), LXSettings.DirectoryButton(
                 icon_name = "preferences-desktop-theme",
                 label_str = "Qt5 (advanced)",
                 description_str = "Change the look of Qt5 applications",
                 onclick_command = ["qt5ct"],
-            ), LXSettings.DirectoryButton(
-                icon_name = "preferences-system-windows",
-                label_str = "Window management (advanced)",
-                description_str = "Change how windows look and are managed",
-                onclick_command = ["obconf", "--tab", "3"],
             )
         ]
         self.page_path_str = "Home -> Appearance"

@@ -6,11 +6,11 @@ import subprocess
 
 import LXSettings
 
-class __page_home_system_notifications(LXSettings.XEmbedPage):
+class __page_home_desktop_notifications(LXSettings.XEmbedPage):
     def __init__(self):
         super().init_begin()
 
-        self.page_path_str = "Home -> System -> Notifications"
+        self.page_path_str = "Home -> Desktop -> Notifications"
         self.page_name = "Notifications"
         self.icon_name = "xfce4-notifyd"
         
@@ -31,4 +31,4 @@ class __page_home_system_notifications(LXSettings.XEmbedPage):
 
         super().on_enter_end()
 
-page_home_system_notifications = __page_home_system_notifications()
+page_home_desktop_notifications = __page_home_desktop_notifications()

@@ -6,7 +6,7 @@ import subprocess
 
 import LXSettings
 
-class __page_PAGE_PATH_IDENTIFIER(LXSettings.XEmbedPage):
+class __page_PAGE_PATH_IDENTIFIER(LXSettings.Page):
     def __init__(self):
         super().init_begin()
 

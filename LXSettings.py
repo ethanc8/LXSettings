@@ -22,6 +22,12 @@ def open_process(args, addenv={}):
         **addenv,
     })
 
+def open_process_sudo(args, addenv={}):
+    open_process(["sudo", "-A"] + args, {
+        "SUDO_ASKPASS" : "/usr/lib/rc-gui/pwdrcg.sh",
+        **addenv
+    })
+
 ## Main Stack
 
 class MainStack(Gtk.Stack):
@@ -46,7 +52,7 @@ class MainStack(Gtk.Stack):
 #         print("Adding page: " + pageName)
         self.add_named(page.top_widget, pageName)
         self.pages_dict[pageName] = page
-        page.top_widget.show()
+        # page.top_widget.show()
 
     def navigateToPage(self, pageName: str):
         page = self.pageForPageName(pageName)
@@ -135,6 +141,7 @@ class DirectoryPage(Page):
         self.init_flowbox()
 
         super().init_end()
+        self.top_widget.show()
 
     # @property
     # def main_widget(self):
@@ -159,7 +166,8 @@ class XEmbedPage(Page):
     
     def init_end(self):
         super().init_end()
-
+        self.top_widget.show()
+        
 
     def on_enter(self):
         self.on_enter_begin()

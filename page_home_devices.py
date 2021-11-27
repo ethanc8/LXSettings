@@ -28,7 +28,7 @@ class __page_home_devices(LXSettings.DirectoryPage):
                 onclick_command = ["blueman-manager"],
             ), LXSettings.DirectoryButton(
                 icon_name = "preferences-system-bluetooth",
-                label_str = "Bluetooth Adapters",
+                label_str = "Bluetooth Visibility",
                 description_str = "Configure Bluetooth adapters and their visibility.",
                 onclick_command = ["blueman-adapters"],
             ), LXSettings.DirectoryButton(

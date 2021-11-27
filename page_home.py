@@ -15,6 +15,11 @@ class __page_home(LXSettings.DirectoryPage):
                 description_str = "Change how your desktop and apps look and feel.",
                 onclick_page_str = "Home -> Appearance",
             ), LXSettings.DirectoryButton(
+                icon_name = "user-desktop",
+                label_str = "Desktop",
+                description_str = "Configure your desktop environment.",
+                onclick_page_str = "Home -> Desktop",
+            ), LXSettings.DirectoryButton(
                 icon_name = "preferences-system",
                 label_str = "System",
                 description_str = "Configure your operating system.",
@@ -34,6 +39,11 @@ class __page_home(LXSettings.DirectoryPage):
                 label_str = "Software",
                 description_str = "Install and remove software.",
                 onclick_page_str = "Home -> Software",
+            # ), LXSettings.DirectoryButton(
+            #     icon_name = "help-about",
+            #     label_str = "About",
+            #     description_str = "See information about this computer and operating system.",
+            #     onclick_page_str = "Home -> About (loading...)",
             ), 
 #             ["preferences-desktop-theme", "Appearance", "Change how your desktop and apps look and feel.", lambda sender: [
 #                 LXSettings.main_stack.navigateToPage("Home -> Appearance"),

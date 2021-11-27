@@ -20,6 +20,11 @@ class __page_home_software(LXSettings.DirectoryPage):
 
         self.items = [
             LXSettings.DirectoryButton(
+                icon_name = "emblem-default",
+                label_str = "Default Apps",
+                description_str = "Set the default apps.",
+                onclick_command = ["lxsession-default-apps", "--profile=LXDE-pi"],
+            ), LXSettings.DirectoryButton(
                 icon_name = "system-software-install",
                 label_str = "Add / Remove Software",
                 description_str = "Select packages to install or remove.",
