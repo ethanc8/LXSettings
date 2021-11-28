@@ -1,0 +1,86 @@
+[
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/meson test --no-rebuild --print-errorlogs",
+    "file": "all",
+    "output": "meson-test"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "",
+    "file": "meson-test",
+    "output": "test"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/meson test --benchmark --logbase benchmarklog --num-processes=1 --no-rebuild",
+    "file": "all",
+    "output": "meson-benchmark"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "",
+    "file": "meson-benchmark",
+    "output": "benchmark"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/meson install --no-rebuild",
+    "file": "PHONY",
+    "output": "meson-install"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "",
+    "file": "meson-install",
+    "output": "install"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/meson dist",
+    "file": "PHONY",
+    "output": "meson-dist"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "",
+    "file": "meson-dist",
+    "output": "dist"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/meson --internal uninstall",
+    "file": "PHONY",
+    "output": "meson-uninstall"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "",
+    "file": "meson-uninstall",
+    "output": "uninstall"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "",
+    "file": "meson-clean",
+    "output": "clean"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/ninja -t clean",
+    "file": "PHONY",
+    "output": "meson-clean"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/meson --internal regenerate /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0 /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir --backend ninja",
+    "file": "../meson.build",
+    "output": "build.ninja"
+  },
+  {
+    "directory": "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir",
+    "command": "/usr/bin/meson --internal regenerate /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0 /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir --backend ninja",
+    "file": "PHONY",
+    "output": "reconfigure"
+  }
+]

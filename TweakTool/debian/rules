@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+# Add symlinks to the old directory so that the old autostart .desktop in the
+# user directory still works
+override_dh_link:
+	( mkdir -p debian/gnome-tweaks/usr/lib/gnome-tweak-tool; cd debian/gnome-tweaks/usr/lib/gnome-tweak-tool; ln -s ../../libexec/* . )
+	dh_link

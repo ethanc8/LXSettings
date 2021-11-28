@@ -1,0 +1,21 @@
+From: Josselin Mouette <joss@debian.org>
+Date: Fri, 22 Apr 2011 00:29:01 +0000
+Subject: Put in Settings menu
+
+---
+ data/org.gnome.tweaks.desktop.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/data/org.gnome.tweaks.desktop.in b/data/org.gnome.tweaks.desktop.in
+index add1af5..33f0c7c 100644
+--- a/data/org.gnome.tweaks.desktop.in
++++ b/data/org.gnome.tweaks.desktop.in
+@@ -8,7 +8,7 @@ Terminal=false
+ Type=Application
+ StartupNotify=true
+ StartupWMClass=gnome-tweaks
+-Categories=GNOME;GTK;Utility;
++Categories=GNOME;GTK;Settings;
+ # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+ Keywords=Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;
+ OnlyShowIn=GNOME;Unity;Pantheon;

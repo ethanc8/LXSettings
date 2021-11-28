@@ -1,0 +1,7 @@
+DATA_DIR = "/usr/local/share"
+PKG_DATA_DIR = "/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/data"
+GSETTINGS_SCHEMA_DIR = "/usr/local/share/glib-2.0/schemas"
+TWEAK_DIR = "/home/pi/Projects/LXSettings/TweakTool/Data/TweakDir"
+VERSION = "3.34.0"
+LOCALE_DIR = "/usr/local/share/locale"
+LIBEXEC_DIR = "/usr/local/libexec"

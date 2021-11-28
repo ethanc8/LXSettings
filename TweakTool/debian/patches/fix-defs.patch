@@ -1,0 +1,23 @@
+From: Jeremy Bicha <jbicha@debian.org>
+Date: Tue, 29 Aug 2017 18:10:06 -0400
+Subject: Workaround issue where TWEAKDIR is set to
+
+/usr/lib/python3.5/site-packages/gtweak/
+which obviously won't work
+---
+ gtweak/meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gtweak/meson.build b/gtweak/meson.build
+index 4ce1ec4..e65ec16 100644
+--- a/gtweak/meson.build
++++ b/gtweak/meson.build
+@@ -4,7 +4,7 @@ defs_conf.set('GSETTINGSSCHEMADIR', schemadir)
+ defs_conf.set('LIBEXECDIR', libexecdir)
+ defs_conf.set('LOCALEDIR', localedir)
+ defs_conf.set('PKGDATADIR', pkgdatadir)
+-defs_conf.set('TWEAKDIR', join_paths(gtweakdir, 'tweaks'))
++defs_conf.set('TWEAKDIR', join_paths('/usr/lib/python3/dist-packages/gtweak', 'tweaks'))
+ defs_conf.set('VERSION', meson.project_version())
+ 
+ configure_file(

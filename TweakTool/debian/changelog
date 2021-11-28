@@ -1,0 +1,490 @@
+gnome-tweaks (3.34.0-4) unstable; urgency=medium
+
+  * Team upload
+
+  [ Sebastien Bacher ]
+  * debian/control.in:
+    - Depend on gnome-shell-extension-prefs (LP: #1868932)
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 13 Sep 2020 12:07:26 +0100
+
+gnome-tweaks (3.34.0-3) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.5.0 (no further changes)
+  * Move gnome-tweak-tool-lid-inhibitor to /usr/libexec add compatibility
+    symlink
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 17 Mar 2020 14:40:01 +0100
+
+gnome-tweaks (3.34.0-2) unstable; urgency=medium
+
+  * Depend on gir1.2-handy-0.0. Thanks to Fran Glais
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 27 Sep 2019 19:39:25 -0400
+
+gnome-tweaks (3.34.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Build-Depend on dh-sequence-python3
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 27 Sep 2019 07:32:36 -0400
+
+gnome-tweaks (3.32.0-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 10 Mar 2019 21:04:13 -0400
+
+gnome-tweaks (3.31.90-1) experimental; urgency=medium
+
+  * New upstream development release
+  * Build-Depend on debhelper-compat 12 and drop debian/compat
+  * Build-Depend on dh-sequence-gnome instead of gnome-pkg-tools
+  * Bump Standards-Version to 4.3.0
+  * Add X-Ubuntu-Use-Langpack: yes to opt in to Ubuntu language packs
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 06 Feb 2019 14:54:48 -0500
+
+gnome-tweaks (3.30.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fix running Tweaks outside of GNOME Shell (LP: #1799459)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 09 Dec 2018 22:00:39 -0500
+
+gnome-tweaks (3.30.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop obsolete dh_install override for Ubuntu
+  * Bump Standards-Version to 4.2.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 27 Sep 2018 10:50:08 -0400
+
+gnome-tweaks (3.30.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump dependencies to match recommendations in README
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 03 Sep 2018 13:52:35 -0400
+
+gnome-tweaks (3.29.92-1) experimental; urgency=medium
+
+  * New upstream development release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 26 Aug 2018 17:45:42 -0400
+
+gnome-tweaks (3.29.90.1-2) experimental; urgency=medium
+
+  * Fix versioned dependency on gir1.2-glib-2.0. Thanks harry332.
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 07 Aug 2018 12:09:34 -0400
+
+gnome-tweaks (3.29.90.1-1) experimental; urgency=medium
+
+  * New upstream development release
+  * debian/control.in: Bump minimum gir1.2-glib-2.0 to 2.57.2 and
+    gir1.2-gnomedesktop-3.0 to 3.29.90.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 02 Aug 2018 15:45:04 -0400
+
+gnome-tweaks (3.28.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop hot-corners-switch.patch: Applied in new release
+  * Bump Standards-Version to 4.1.4
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 08 Apr 2018 13:06:22 -0400
+
+gnome-tweaks (3.28.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Cherry-pick hot-corners-switch.patch:
+    - Add an "Activities Overview Hot Corner" switch if gnome-shell
+      includes that option (it does on Ubuntu)
+  * Install the Sound panel except in Ubuntu where it's not needed
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 12 Mar 2018 20:38:11 -0400
+
+gnome-tweaks (3.27.92-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release candidate
+  * d/p/install-desktop-panel.patch: Drop, applied upstream
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 07 Mar 2018 15:16:41 +0000
+
+gnome-tweaks (3.27.90.2-1) unstable; urgency=medium
+
+  * New upstream development release
+  * Don't install the new Sound panel since it needs
+    gnome-settings-daemon patches to be functional
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 16 Feb 2018 16:50:26 -0500
+
+gnome-tweaks (3.27.90-1) unstable; urgency=medium
+
+  * New upstream development release
+  * Add install-desktop-panel.patch:
+    - Install Desktop panel as long as we still offer Nautilus 3.26
+  * Update debian/copyright (Closes: #888567)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 05 Feb 2018 22:48:07 -0500
+
+gnome-tweaks (3.27.4-1) unstable; urgency=medium
+
+  * New upstream unstable release
+  * Rename from gnome-tweak-tool to gnome-tweaks to match upstream name change
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Refresh patches
+  * Bump debhelper compat to 11
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 26 Jan 2018 21:31:48 -0500
+
+gnome-tweak-tool (3.26.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop cherry-picked theme patches
+  * Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 12 Dec 2017 18:51:04 -0500
+
+gnome-tweak-tool (3.26.3-1) unstable; urgency=medium
+
+  [ Michael Biebl ]
+  * New upstream release (LP: #1728755)
+
+  [ Jeremy Bicha ]
+  * Cherry-pick patches from gnome-3-26 branch to improve Theme tweaks:
+    - 0001-appearance-Stop-requiring-gtk2-version-of-theme.patch
+    - 0002-appearance-Don-t-duplicate-the-theme-name.patch
+    - 0003-appearance-Always-offer-Adwaita-and-High-Contrast-GT.patch
+    - 0004-appearance-Don-t-duplicate-the-GNOME-Shell-theme-nam.patch
+    - 0005-appearance-Always-offer-HighContrastInverse.patch
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 08 Nov 2017 15:27:51 -0500
+
+gnome-tweak-tool (3.26.2.1-2) unstable; urgency=medium
+
+  * Release to unstable (Closes: #873765)
+  * debian/control.in:
+    - Depend on nautilus-data (for gsettings schemas)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 13 Oct 2017 17:29:45 -0400
+
+gnome-tweak-tool (3.26.2.1-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 02 Oct 2017 14:17:43 -0400
+
+gnome-tweak-tool (3.26.2-1) experimental; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 02 Oct 2017 13:39:50 -0400
+
+gnome-tweak-tool (3.26.1-1) experimental; urgency=medium
+
+  * New upstream release (LP: #1717530, LP: #1718400)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 20 Sep 2017 14:18:27 -0400
+
+gnome-tweak-tool (3.25.92-1) experimental; urgency=medium
+
+  * New upstream release
+  * debian/control.in:
+    - Require gnome-shell-common >= 3.24
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 05 Sep 2017 03:37:38 -0400
+
+gnome-tweak-tool (3.25.91-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Power button action moved to gnome-control-center (Closes: #800129)
+    - Redesigned Application Menu tweak (Closes: #799102)
+  * Build with meson
+  * Switch to python3
+  * debian/control.in:
+    - Bump minimum python-gi to 3.10
+    - Bump minimum gsettings-desktop-schemas to 3.24
+    - Drop unnecessary Build-Depends
+  * Refresh 01_menu_category.patch
+  * Add fix-defs.patch to workaround issue with how the python3
+    library install directory is reported during the build
+  * Bump Standards-Version to 4.1.0
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 29 Aug 2017 18:06:25 -0400
+
+gnome-tweak-tool (3.22.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump debhelper compat level to 10.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 20 Sep 2016 21:01:38 +0200
+
+gnome-tweak-tool (3.21.91-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop debian/patches/git_use-new-gnome-desktop-calendar-schema.patch,
+    merged upstream.
+  * Convert from cdbs to dh.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 06 Sep 2016 01:02:44 +0200
+
+gnome-tweak-tool (3.20.1-2) unstable; urgency=medium
+
+  * Add debian/patches/git_use-new-gnome-desktop-calendar-schema.patch
+  * Bump gsettings-desktop-schemas (build-)dependencies to >= 3.21.2
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 01 Sep 2016 21:06:54 +0200
+
+gnome-tweak-tool (3.20.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.8.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 26 Apr 2016 20:10:28 +0200
+
+gnome-tweak-tool (3.20.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control.in: Bump Standards-Version to 3.9.7.
+
+ -- Brandon Snider <brandonjsnider@gmail.com>  Sun, 10 Apr 2016 15:09:02 -0400
+
+gnome-tweak-tool (3.18.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 12 Nov 2015 14:08:36 +0100
+
+gnome-tweak-tool (3.18.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 03 Oct 2015 18:39:50 +0200
+
+gnome-tweak-tool (3.16.2-2) unstable; urgency=medium
+
+  * Add dependency on gnome-settings-daemon, required for the
+    org.gnome.settings-daemon.plugins.xsettings GSettings schema.
+    Closes: #789023
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 17 Jun 2015 11:37:05 +0200
+
+gnome-tweak-tool (3.16.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Homepage: URL.
+  * Rewrite debian/copyright using the machine-readable copyright format 1.0.
+  * Bump Standards-Version to 3.9.6.
+  * Add explicit Depends on gir1.2-glib-2.0 and gir1.2-pango-1.0.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 14 Jun 2015 23:13:05 +0200
+
+gnome-tweak-tool (3.14.2-2) unstable; urgency=medium
+
+  * Add missing dependency on gir1.2-soup-2.4. Closes: #772881.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 13 Dec 2014 22:07:14 +0100
+
+gnome-tweak-tool (3.14.2-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release
+
+  [ Dmitry Shachnev ]
+  * Bump libgtk-3-dev requirement to 3.12.0, according to configure.ac.
+  * Depend on mutter-common, as gnome-tweak-tool currently crashes when
+    org.gnome.mutter gsettings schema is not present (see BGO #721613).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 29 Nov 2014 14:42:46 +0300
+
+gnome-tweak-tool (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 23 Sep 2014 20:45:44 +0200
+
+gnome-tweak-tool (3.12.0-2) unstable; urgency=medium
+
+  [ Laurent Bigonville ]
+  * Bump gir1.2-gtk-3.0 to >= 3.12, this is needed for gtk_decoration_layout()
+    at least (Closes: #743143)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 06 Apr 2014 19:02:49 +0200
+
+gnome-tweak-tool (3.12.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 26 Mar 2014 23:37:11 +0100
+
+gnome-tweak-tool (3.10.1-2) unstable; urgency=medium
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/control.in:
+    + Bump gir1.2-gtk-3.0 minimum dependency. Closes: #740337.
+
+  [ Andreas Henriksson ]
+  * Add dependency on gir1.2-notify-0.7. Closes: #740595.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 16 Mar 2014 19:47:10 +0100
+
+gnome-tweak-tool (3.10.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add libgtk-3-dev (>= 3.9.10) build-dependency
+  * Drop debian/patches/drop-gconf.patch, merged upstream.
+  * Drop libgconf2-dev, no longer needed.
+  * Drop gettext build-dependency, no longer needed.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 23 Feb 2014 19:27:43 +0100
+
+gnome-tweak-tool (3.8.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Bump Standards-Version to 3.9.4. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 14 Oct 2013 10:37:16 +0200
+
+gnome-tweak-tool (3.8.1-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * debian/patches/drop-gconf.patch:
+    - Drop gconf support since we're not using it anyway
+  * debian/control.in, debian/rules:
+    - Run autoreconf
+  * Bump dh compat to 9
+  * Update homepage
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 11 Oct 2013 16:23:05 +0200
+
+gnome-tweak-tool (3.8.0-1) experimental; urgency=low
+
+  * Bump gsettings-desktop-schemas dependency to >= 3.6
+    - Schema for input-sources xkb-options was added in 3.6
+  * Bump gsettings-desktop-schemas-dev build-dependency to >= 3.4.0
+    - as required by configure.ac
+  * New upstream release.
+  * debian/patches/01_menu_category.patch: update to apply against 3.8.0
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 24 Jun 2013 12:49:06 +0200
+
+gnome-tweak-tool (3.6.1-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 20 Oct 2012 20:30:52 +0200
+
+gnome-tweak-tool (3.4.0.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 30 May 2012 13:25:58 +0200
+
+gnome-tweak-tool (3.4.0.1-1) experimental; urgency=low
+
+  * New upstream release:
+    - Port Metacity/Mutter/Shell to GSettings.
+  * Bump minimum required version of gsettings-desktop-schemas to 3.3.2 and
+    python-gi to 3.2.1.
+  * Bump Standards-Version to 3.9.3.
+  * debian/patches/02_dont-crash-on-missing-schemas.patch: Removed, merged
+    upstream.
+  * debian/patches/03_fix-user-theme-extension-UUID.patch: Removed, merged
+    upstream.
+  * Add Depends on gnome-shell-common (>= 3.4) for the
+    org.gnome.shell.overrides gsettings schema.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 20 May 2012 00:24:55 +0200
+
+gnome-tweak-tool (3.2.2-3) unstable; urgency=low
+
+  * debian/patches/02_dont-crash-on-missing-schemas.patch:
+    - Don't crash on missing gsettings schemas. Closes: #655535
+      Patch cherry-picked and rebased from upstream Git.
+  * debian/control.in:
+    - Remove Depends on gnome-shell-common. It is no longer necessary with the
+      above patch.
+    - Improve package description. Closes: #633823
+  * debian/patches/03_fix-user-theme-extension-UUID.patch:
+    - Fix UUID for user-theme extension. Closes: #660428
+      Patch cherry-picked from upstream Git.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 23 Feb 2012 01:28:09 +0100
+
+gnome-tweak-tool (3.2.2-2) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Replace python-gobject by python-gi.
+  * Depend on gnome-shell-common instead of gnome-shell.
+
+  [ Michael Biebl ]
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 17 Dec 2011 06:41:11 +0100
+
+gnome-tweak-tool (3.2.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 20 Nov 2011 18:29:20 +0100
+
+gnome-tweak-tool (3.2.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Refresh debian/patches/01_menu_category.patch.
+  * debian/control:
+    - Bump (Build-)Depends on gsettings-desktop-schemas(-dev) to (>= 3.0.0).
+    - Bump (Build-)Depends on python-gobject(-dev) to (>= 2.29.0).
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 07 Nov 2011 17:30:45 +0100
+
+gnome-tweak-tool (3.0.4-2) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * Add missing dependencies on pygobject and GIR packages.
+
+  [ Michael Biebl ]
+  * Upload to unstable.
+  * debian/watch:
+    - Switch to version 3.
+    - Switch to .xz tarballs.
+  * Bump debhelper compatibility level to 8.
+  * debian/control.in:
+    - Add Vcs-* fields.
+    - Add Homepage field.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 14 Oct 2011 20:27:33 +0200
+
+gnome-tweak-tool (3.0.4-1) experimental; urgency=low
+
+  [ Josselin Mouette ]
+  * Phonetics goes between brackets.
+
+  [ Martin Pitt ]
+  * New upstream release.
+  * debian/control.in: Add dependency to gnome-shell. tweak-tool uses the
+    org.gnome.shell.clock gsettings schema, which gnome-shell provides.
+    Without it, it crashes on startup. (LP: #795084)
+  * debian/control.in: Bump Standards-Version to 3.9.2 (no changes necessary).
+
+ -- Martin Pitt <mpitt@debian.org>  Wed, 15 Jun 2011 12:59:44 +0200
+
+gnome-tweak-tool (3.0.0-1) experimental; urgency=low
+
+  * Initial release. Closes: #623635.
+  * 01_menu_category.patch: new patch. Put the tool in the settings
+    menu.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 22 Apr 2011 02:16:46 +0200
