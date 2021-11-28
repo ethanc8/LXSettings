@@ -14,14 +14,6 @@
 /usr/local/lib/python3.9/site-packages/gtweak/utils.py
 /usr/local/lib/python3.9/site-packages/gtweak/widgets.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/__init__.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_appearance.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_desktop.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_font.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_general.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_keymouse.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_shell_extensions.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_startup.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_test.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_title_bar.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_top_bar.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_windows.py

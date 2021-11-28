@@ -1,6 +1,6 @@
-Build started at 2021-11-27T17:42:54.768129
+Build started at 2021-11-27T18:13:42.816735
 Main binary: /usr/bin/python3
-Build Options: 
+Build Options: -Dbackend=ninja
 Python system: Linux
 The Meson build system
 Version: 0.56.2

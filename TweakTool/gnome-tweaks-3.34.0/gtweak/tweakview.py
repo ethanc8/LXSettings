@@ -198,8 +198,8 @@ class Window(Gtk.ApplicationWindow):
 
         groups = list(self._model._tweak_group_names.keys())
         groups = sorted(groups)
-        # "General" needs to be first item in sidebar
-        groups.insert(0, groups.pop(groups.index(_("General"))))
+        # "Window Borders" needs to be first item in sidebar
+        groups.insert(0, groups.pop(groups.index(_("Windows"))))
 
         for g in groups:
             row = _make_items_listbox(g)
