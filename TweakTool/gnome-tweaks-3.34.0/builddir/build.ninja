@@ -26,6 +26,35 @@ build PHONY: phony
 
 # Build rules for targets
 
+build data/org.gnome.tweaks.appdata.xml: CUSTOM_COMMAND ../data/org.gnome.tweaks.appdata.xml.in
+ COMMAND = /usr/bin/meson --internal msgfmthelper ../data/org.gnome.tweaks.appdata.xml.in data/org.gnome.tweaks.appdata.xml xml ../data/../po
+ description = Generating$ org.gnome.tweaks.appdata.xml_data_merge$ with$ a$ custom$ command
+
+build data/org.gnome.tweaks.desktop: CUSTOM_COMMAND ../data/org.gnome.tweaks.desktop.in
+ COMMAND = /usr/bin/meson --internal msgfmthelper ../data/org.gnome.tweaks.desktop.in data/org.gnome.tweaks.desktop desktop ../data/../po
+ description = Generating$ org.gnome.tweaks.desktop_data_merge$ with$ a$ custom$ command
+
+build gnome-tweaks-pot: phony meson-gnome-tweaks-pot
+
+build meson-gnome-tweaks-pot: CUSTOM_COMMAND 
+ COMMAND = /usr/bin/meson --internal commandrunner /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0 /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir po /usr/bin/meson /usr/bin/meson --internal gettext pot --pkgname=gnome-tweaks --extra-args=--flag=NC_:2:pass-c-format@@--flag=g_sprintf:2:c-format@@--flag=g_set_error:4:c-format@@--flag=g_log:3:c-format@@--flag=g_snprintf:3:c-format@@--flag=g_markup_printf_escaped:1:c-format@@--add-comments@@--flag=g_string_printf:2:c-format@@--keyword=g_dpgettext2:2c,3@@--flag=g_fprintf:2:c-format@@--flag=g_error_new:3:c-format@@--keyword=NC_:1c,2@@--flag=C_:2:pass-c-format@@--keyword=_@@--keyword=g_dcgettext:2@@--flag=g_printerr:1:c-format@@--from-code=UTF-8@@--flag=g_dngettext:2:pass-c-format@@--flag=g_string_append_printf:2:c-format@@--flag=g_print:1:c-format@@--keyword=g_dngettext:2,3@@--flag=g_strdup_printf:1:c-format@@--keyword=C_:1c,2@@--flag=g_printf:1:c-format@@--flag=N_:1:pass-c-format@@--keyword=N_
+ description = Running$ external$ command$ gnome-tweaks-pot
+ pool = console
+
+build gnome-tweaks-gmo: phony meson-gnome-tweaks-gmo
+
+build meson-gnome-tweaks-gmo: CUSTOM_COMMAND 
+ COMMAND = /usr/bin/meson --internal commandrunner /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0 /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir po /usr/bin/meson /usr/bin/meson --internal gettext gen_gmo
+ description = Running$ external$ command$ gnome-tweaks-gmo
+ pool = console
+
+build gnome-tweaks-update-po: phony meson-gnome-tweaks-update-po
+
+build meson-gnome-tweaks-update-po: CUSTOM_COMMAND 
+ COMMAND = /usr/bin/meson --internal commandrunner /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0 /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir po /usr/bin/meson /usr/bin/meson --internal gettext update_po --pkgname=gnome-tweaks --extra-args=--flag=NC_:2:pass-c-format@@--flag=g_sprintf:2:c-format@@--flag=g_set_error:4:c-format@@--flag=g_log:3:c-format@@--flag=g_snprintf:3:c-format@@--flag=g_markup_printf_escaped:1:c-format@@--add-comments@@--flag=g_string_printf:2:c-format@@--keyword=g_dpgettext2:2c,3@@--flag=g_fprintf:2:c-format@@--flag=g_error_new:3:c-format@@--keyword=NC_:1c,2@@--flag=C_:2:pass-c-format@@--keyword=_@@--keyword=g_dcgettext:2@@--flag=g_printerr:1:c-format@@--from-code=UTF-8@@--flag=g_dngettext:2:pass-c-format@@--flag=g_string_append_printf:2:c-format@@--flag=g_print:1:c-format@@--keyword=g_dngettext:2,3@@--flag=g_strdup_printf:1:c-format@@--keyword=C_:1c,2@@--flag=g_printf:1:c-format@@--flag=N_:1:pass-c-format@@--keyword=N_
+ description = Running$ external$ command$ gnome-tweaks-update-po
+ pool = console
+
 # Test rules
 
 build meson-test: CUSTOM_COMMAND all PHONY
@@ -66,11 +95,17 @@ build meson-uninstall: CUSTOM_COMMAND PHONY
 
 build uninstall: phony meson-uninstall
 
-build all: phony 
+build all: phony data/org.gnome.tweaks.appdata.xml data/org.gnome.tweaks.desktop
 
 build clean: phony meson-clean
 
-build meson-clean: CUSTOM_COMMAND PHONY
+build meson-clean-ctlist: CUSTOM_COMMAND PHONY
+ COMMAND = /usr/bin/meson --internal cleantrees /home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/builddir/meson-private/cleantrees.dat
+ description = Cleaning$ custom$ target$ directories
+
+build clean-ctlist: phony meson-clean-ctlist
+
+build meson-clean: CUSTOM_COMMAND PHONY | clean-ctlist
  COMMAND = /usr/bin/ninja -t clean
  description = Cleaning
 

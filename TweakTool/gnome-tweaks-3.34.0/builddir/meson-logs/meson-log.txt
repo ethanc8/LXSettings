@@ -1,4 +1,4 @@
-Build started at 2021-11-27T18:13:42.816735
+Build started at 2021-12-18T18:59:47.201229
 Main binary: /usr/bin/python3
 Build Options: -Dbackend=ninja
 Python system: Linux
@@ -17,9 +17,8 @@ Target machine cpu family: arm
 Target machine cpu: armv7l
 WARNING: Project targeting '>= 0.40.0' but tried to use feature introduced in '0.50.0': install arg in configure_file.
 Configuring defs.py using configuration
-WARNING: Gettext not found, all translation targets will be ignored.
 Program meson-postinstall.py found: YES (/home/pi/Projects/LXSettings/TweakTool/gnome-tweaks-3.34.0/meson-postinstall.py)
-Build targets in project: 0
+Build targets in project: 5
 WARNING: Project specifies a minimum meson_version '>= 0.40.0' but uses features which were added in newer versions:
  * 0.50.0: {'install arg in configure_file'}
 

@@ -1,5 +1,7 @@
 # List of files installed by Meson
 # Does not contain files installed by custom scripts.
+/usr/local/share/metainfo/org.gnome.tweaks.appdata.xml
+/usr/local/share/applications/org.gnome.tweaks.desktop
 /usr/local/bin/gnome-tweaks
 /usr/local/libexec/gnome-tweak-tool-lid-inhibitor
 /usr/local/lib/python3.9/site-packages/gtweak/defs.py
@@ -14,8 +16,12 @@
 /usr/local/lib/python3.9/site-packages/gtweak/utils.py
 /usr/local/lib/python3.9/site-packages/gtweak/widgets.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/__init__.py
+/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_appearance.py
+/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_font.py
+/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_general.py
+/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_keymouse.py
+/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_startup.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_title_bar.py
-/usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_top_bar.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_windows.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_workspaces.py
 /usr/local/lib/python3.9/site-packages/gtweak/tweaks/tweak_group_xkb.py
@@ -24,3 +30,5 @@
 /usr/local/share/gnome-tweaks/shell.css
 /usr/local/share/icons/hicolor/scalable/apps/org.gnome.tweaks.svg
 /usr/local/share/icons/hicolor/symbolic/apps/org.gnome.tweaks-symbolic.svg
+/usr/local/share/applications
+/usr/local/share/metainfo

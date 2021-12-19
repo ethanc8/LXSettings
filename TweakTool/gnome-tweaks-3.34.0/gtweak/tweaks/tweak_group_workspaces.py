@@ -18,7 +18,7 @@ class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
     def __init__(self, **options):
         name = _("Dynamic Workspaces")
         Gtk.ListBox.__init__(self)
-        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "dynamic-workspaces", loaded=_shell_loaded)
+        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "dynamic-workspaces")
 
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
@@ -94,8 +94,8 @@ class PrimaryWorkspaceTweak(Gtk.ListBox, Tweak):
     def __init__(self, **options):
         name = _("Workspaces")
         Gtk.ListBox.__init__(self)
-        Tweak.__init__(self, _("Display Handling"), _("Workspaces span displays"), loaded=_shell_loaded,)
-        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "workspaces-only-on-primary", loaded=_shell_loaded)
+        Tweak.__init__(self, _("Display Handling"), _("Workspaces span displays"))
+        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "workspaces-only-on-primary")
 
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
@@ -167,14 +167,14 @@ class PrimaryWorkspaceTweak(Gtk.ListBox, Tweak):
             self.check2.show()
 
 sg = build_horizontal_sizegroup()
-sw = StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded)
+sw = StaticWorkspaceTweak(size_group=sg)
 depends_how = lambda x,kn: not(x.get_boolean(kn))
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Workspaces"),
         sw,
-        GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg, loaded=_shell_loaded),
-        Title(_("Display Handling"), "", uid="title-theme", loaded=_shell_loaded),
+        GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg),
+        Title(_("Display Handling"), "", uid="title-theme"),
         PrimaryWorkspaceTweak(),
     )
 ]
