@@ -13,6 +13,13 @@ class __page_home_desktop(LXSettings.DirectoryPage):
         self.items = [
             LXSettings.DirectoryButton(
                 icon_name = "preferences-desktop-theme",
+                label_str = "Desktop", 
+                description_str = 
+"""The first place to go if you want
+to change your desktop's look and feel.""",
+                onclick_command = ['pcmanfm', '--desktop-pref'],
+            ), LXSettings.DirectoryButton(
+                icon_name = "preferences-desktop-theme",
                 label_str = "Panel",
                 description_str = "Change the look and behavior of the panel/menubar.",
                 onclick_command = ["lxpanelctl", "config"],

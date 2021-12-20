@@ -17,11 +17,7 @@ class __page_home_appearance(LXSettings.DirectoryPage):
                 description_str = 
 """The first place to go if you want
 to change your desktop's look and feel.""",
-                onclick = lambda _: [
-                    LXSettings.open_process(["pipanel", {
-                        "SUDO_ASKPASS" : "/usr/lib/pipanel/pwdpip.sh"
-                    }])
-                ]
+                onclick_command = ['pcmanfm', '--desktop-pref'],
             ), LXSettings.DirectoryButton(
                 icon_name = "preferences-desktop-theme",
                 label_str = "Additional appearance settings",

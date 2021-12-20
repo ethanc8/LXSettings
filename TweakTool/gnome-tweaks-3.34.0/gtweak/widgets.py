@@ -245,6 +245,7 @@ class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         )
 
 
+
 class GSettingsSwitchTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)

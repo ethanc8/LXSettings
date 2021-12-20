@@ -12,6 +12,9 @@ from gtweak.widgets import ListBoxTweakGroup, build_horizontal_sizegroup, Title,
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
+# Workspaces do not work.
+# https://forums.raspberrypi.com/viewtopic.php?p=1935494&hilit=workspace&sid=04848e045d12bd610afcfd2e0f5b9fca#p1935494
+# https://gitlab.gnome.org/GNOME/mutter/-/issues/2038
 
 class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
 
@@ -170,8 +173,14 @@ sg = build_horizontal_sizegroup()
 sw = StaticWorkspaceTweak(size_group=sg)
 depends_how = lambda x,kn: not(x.get_boolean(kn))
 
+# class LabelTweak(Gtk.Label, Tweak):
+#     loaded = True
+
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Workspaces"),
+#         LabelTweak("""WARNING: Workspaces do not work. 
+# see https://forums.raspberrypi.com/viewtopic.php?p=1935494&hilit=workspace&sid=04848e045d12bd610afcfd2e0f5b9fca#p1935494
+# see https://gitlab.gnome.org/GNOME/mutter/-/issues/2038"""),
         sw,
         GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg),
         Title(_("Display Handling"), "", uid="title-theme"),

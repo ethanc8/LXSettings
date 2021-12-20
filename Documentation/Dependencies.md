@@ -28,6 +28,8 @@ Autostar
 touch ~/.xprofile
 touch ~/.xinitrc
 touch ~/EnvironmentVariables
+touch ~/.profile
+touch ~/.bashrc
 
 cat ~/.xprofile >> ~/EnvironmentVariables
 cat ~/.xinitrc >>~/EnvironmentVariables
